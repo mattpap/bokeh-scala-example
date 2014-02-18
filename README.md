@@ -12,6 +12,7 @@ Example showing how to configure a project to use bokeh-scala.
 $ git clone https://github.com/mattpap/bokeh-scala-example
 $ cd bokeh-scala-example
 $ ./sbt
+> run
 ```
 
 ## License
