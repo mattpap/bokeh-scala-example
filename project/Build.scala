@@ -20,12 +20,13 @@ object ProjectBuild extends Build {
     )
 
     object Dependencies {
+        val bokeh = "org.continuumio" %% "bokeh" % "0.1-SNAPSHOT"
         val breeze = "org.scalanlp" %% "breeze" % "0.6"
         val specs2 = "org.specs2" %% "specs2" % "2.3.8" % "test"
     }
 
     lazy val exampleSettings = Project.defaultSettings ++ Seq(
-        libraryDependencies ++= { import Dependencies._; Seq(breeze, specs2) }
+        libraryDependencies ++= { import Dependencies._; Seq(bokeh, breeze, specs2) }
     )
 
     lazy val example = Project(id="example", base=file("."), settings=exampleSettings)
