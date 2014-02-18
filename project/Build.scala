@@ -16,7 +16,9 @@ object ProjectBuild extends Build {
         cancelable := true,
         resolvers ++= Seq(
             Resolver.sonatypeRepo("releases"),
-            Resolver.sonatypeRepo("snapshots"))
+            Resolver.sonatypeRepo("snapshots"),
+            "bokeh-releases" at "https://github.com/mattpap/mvn-repo/raw/master/releases",
+            "bokeh-snapshots" at "https://github.com/mattpap/mvn-repo/raw/master/snapshots")
     )
 
     object Dependencies {
